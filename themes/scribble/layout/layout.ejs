@@ -1,0 +1,20 @@
+<%- partial('_partial/head') %>
+
+<body>
+  <header id="header" class="inner">
+    <%- partial('_partial/header') %>
+  </header>
+  <div id="container" class="inner">
+    <div class="block">
+      <% for (var i in theme.menu){ %>
+      <a href="<%- theme.menu[i] %>"><%= i %></a>
+      <% } %>
+    </div>
+    <div class="content"><%- body %></div>
+  </div>
+  <footer id="footer" class="inner">
+    <%- partial('_partial/footer') %>
+  </footer>
+  <%- partial('_partial/after_footer') %>
+</body>
+</html>

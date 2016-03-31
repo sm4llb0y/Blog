@@ -1,0 +1,27 @@
+<% if (page.comments){ %>
+<!--likaci css style begin-->
+<style type="text/css">
+#Disqus_bt,#duoshuo_bt { padding: 5px 10px 5px 7px; line-height: 17px; display: block; float: left; margin: 0 7px 0 0; background-color: #f5f5f5; border: 1px solid #dedede; border-top: 1px solid #eee; border-left: 1px solid #eee; }
+#Disqus_bt{color: #336699}
+#duoshuo_bt{color: #d12f19}
+#duoshuo_bt.newclass{background-color:#DFF4FF}
+#Disqus_bt.newclass{background-color:#E6EFC2}
+</style>
+<!--likaci css style end-->
+<section id="comment">
+<!--likaci add duoshuo begin-->
+    <div class="ds-thread"></div>
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"sm4llb0y"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = 'http://static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+        || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!--likaci add duoshuo end-->
+</section>
+<% } %>
