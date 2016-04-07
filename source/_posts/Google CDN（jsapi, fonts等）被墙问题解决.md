@@ -3,15 +3,12 @@ date: 2016-03-31 12:22:56
 tags: Raspberry Pi, Pi
 categories: 
 ---
-首次打开Raspberry Pi的浏览器访问中文网站的时候，所有的中文字符都会显示为方块，且无法输入中文。解决方法如下：
+Google的隔离导致许多引用了Google CDN上包括字体，jsapi以及常用第三方库的网页会一直等待被墙的响应，直至其失败后才继续后面的加载，解决方法如下：
 <!--more-->
 
-1. 安装中文字体和输入法：
-    sudo apt-get update
-    sudo apt-get install ttf-wqy-zenhei
-    sudo apt-get install scim-pinyin
+1. 如果是你自己的网站，这个相对容易考虑直接替换相应的链接为360或者中科大的镜像，或者自己host需要的库文件：
+    googleapis.com 替换为 lug.ustc.edu.cn / useso.com
 
-2. 然后运行下面的命令打开Raspberry Pi的设置，选择Locale为zh_CN.UTF-8
-    sudo raspi-config
+    注：360的镜像不支持Https，如果是Https建议使用中科大的镜像
 
-3. 重启验证显示问题解决，并且能够通过Ctrl+Space切换输入法
+2. 如果是别人的网站请直接翻墙，如无法翻墙请安装国内网友的插件[ReplaceGoogleCDN](https://github.com/justjavac/ReplaceGoogleCDN)，如果你有什么特殊需求请直接git clone修改后再安装自己的定制版。
